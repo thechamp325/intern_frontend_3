@@ -1,0 +1,247 @@
+<mat-sidenav-container>
+    <mat-sidenav mode="over" [(opened)]="opened"><mat-icon>home</mat-icon>PICT MIS SYSTEM
+        <mat-icon mat-button (click)="opened=!opened" aria-hidden="false" aria-label="Example home icon">close</mat-icon>
+        <mat-list role="list">
+            <mat-list-item role="listitem"><button color="primary" routerLink="/staff-form" mat-raised-button>Emplyee Form</button></mat-list-item>
+            <mat-list-item role="listitem"><button color="primary" routerLink="/report" mat-raised-button>Report</button></mat-list-item>
+            <mat-list-item role="listitem"><button color="primary" routerLink="/salary" mat-raised-button>salary</button></mat-list-item>
+            <mat-list-item role="listitem"><button color="primary" routerLink="/experience" mat-raised-button>Experience</button></mat-list-item>
+        </mat-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+       
+        
+<nav class="navbar navbar-expand navbar-dark bg-dark">
+    <div class="navbar-nav">
+        <button color="accent" mat-button (click)="opened=!opened"><mat-icon>menu</mat-icon></button>
+        <a class="nav-item nav-link" routerLink="/staff-home">Home</a>
+        <a class="nav-item nav-link" (click)="logout()">Logout</a>
+    </div>
+  </nav>
+  <div class="jumbotron">
+<mat-card>
+        <form [formGroup]="des2" >
+    <h3><input matInput formControlName="maindate" disabled></h3>
+    <br>
+    <br>
+<section>
+    <h1>SALARY CERTIFICATE</h1>
+    </section>
+    <br>
+    <br>
+    <section >
+        <h5>
+        This is to certify that <mat-form-field class="example-full-width">
+                <input matInput formControlName="empid" ></mat-form-field> is working in this institute as
+                This is to certify that {{name}}  <mat-form-field class="example-full-width">
+                        <input matInput formControlName="desig" ></mat-form-field> in {{Department}} <mat-form-field class="example-full-width">
+                                <input matInput formControlName="dep" ></mat-form-field> . His/Her salary for the month&nbsp;&nbsp;<mat-form-field class="example">
+                                        <input matInput formControlName="from_month" ></mat-form-field> &nbsp;&nbsp; To &nbsp;&nbsp;<mat-form-field class="example">
+                                                <input matInput formControlName="to_month" ></mat-form-field> &nbsp;&nbsp;is as below:-
+        </h5>
+    </section>
+    <section>
+         
+                <head> 
+                    
+                    <style> 
+                        table, th, td { 
+                            border: 1px solid black; 
+                            border-collapse: collapse; 
+                            padding: 6px; 
+                        } 
+                        body{
+                            background: none;
+                            color: black;
+                        }
+                    </style> 
+                </head> 
+                
+                <body style = "text-align:center"> 
+                   
+                    <br>
+                    <br>
+                    <table> 
+                    <tr> 
+                        <th>Earnings</th> 
+                        <th><input matInput formControlName="m1" ></th>
+                        <th><input matInput formControlName="m2" ></th>
+                        <th><input matInput formControlName="m3" ></th>
+                        <th>Deductions</th> 
+                        <th><input matInput formControlName="m4" ></th>
+                        <th><input matInput formControlName="m5" ></th>
+                        <th><input matInput formControlName="m6" ></th>
+                    </tr> 
+                    <tr> 
+                        <td>BASIC PAY/PAY</td> 
+                        <td> 
+                                <input matInput formControlName="bm1" >
+                              </td>
+                        <td> 
+                                <input matInput formControlName="bm2" >
+                             </td>
+                        <td>    <input matInput formControlName="bm3" >
+                              </td>
+                        <td>P.F.</td>
+                        <td>    <input matInput formControlName="bm4" >
+                            </td>
+                        <td>    <input matInput formControlName="bm5">
+                            </td>
+                        <td>    <input matInput formControlName="bm6">
+                            </td> 
+                    </tr> 
+                    <tr> 
+                        <td>D.P/AGP</td> 
+                        <td> 
+                                <input matInput formControlName="dp1" >
+                              </td>
+                        <td> 
+                                <input matInput formControlName="dp2" >
+                             </td>
+                        <td>    <input matInput formControlName="dp3" >
+                              </td>
+                        <td>PROFESSIONAL TAX</td>
+                        <td> 
+                                <input matInput formControlName="tax1" >
+                              </td>
+                        <td> 
+                                <input matInput formControlName="tax2" >
+                             </td>
+                        <td>    <input matInput formControlName="tax3" >
+                              </td>
+                    </tr> 
+                    <tr> 
+                        <td>D.A</td> 
+                        <td> 
+                                <input matInput value="Jan" disabled>
+                              </td>
+                        <td> 
+                                <input matInput value="Feb" disabled>
+                             </td>
+                        <td>    <input matInput value="March" disabled>
+                              </td>
+                        <td>INCOME TAX</td>
+                        <td> 
+                                <input matInput value="Jan" disabled>
+                              </td>
+                        <td> 
+                                <input matInput value="Feb" disabled>
+                             </td>
+                        <td>    <input matInput value="March" disabled>
+                              </td>
+                    </tr> 
+                    <tr> 
+                        <td>H.R.A</td> 
+                        <td> 
+                                <input matInput value="Jan" disabled>
+                              </td>
+                        <td> 
+                                <input matInput value="Feb" disabled>
+                             </td>
+                        <td>    <input matInput value="March" disabled>
+                              </td>
+                        <td>EVENUE STAMP</td>
+                        <td> 
+                                <input matInput value="Jan" disabled>
+                              </td>
+                        <td> 
+                                <input matInput value="Feb" disabled>
+                             </td>
+                        <td>    <input matInput value="March" disabled>
+                              </td>
+                    </tr> 
+                    <tr> 
+                        <td>C.C.A</td> 
+                        <td> 
+                                <input matInput value="Jan" disabled>
+                              </td>
+                        <td> 
+                                <input matInput value="Feb" disabled>
+                             </td>
+                        <td>    <input matInput value="March" disabled>
+                              </td>
+                        <td>OTHER DEDUCTIONS</td>
+                        <td> 
+                                <input matInput value="Jan" disabled>
+                              </td>
+                        <td> 
+                                <input matInput value="Feb" disabled>
+                             </td>
+                        <td>    <input matInput value="March" disabled>
+                              </td>
+                    </tr> 
+                    <tr> 
+                        <td>T.A</td> 
+                        <td> 
+                                <input matInput value="Jan" disabled>
+                              </td>
+                        <td> 
+                                <input matInput value="Feb" disabled>
+                             </td>
+                        <td>    <input matInput value="March" disabled>
+                              </td>
+                        <td>TOTAL DEDUCTIONS</td>
+                        <td> 
+                                <input matInput value="Jan" disabled>
+                              </td>
+                        <td> 
+                                <input matInput value="Feb" disabled>
+                             </td>
+                        <td>    <input matInput value="March" disabled>
+                              </td>
+                    </tr> 
+                    <tr> 
+                        <td><b>GROSS SALARY(Rs.)</b></td> 
+                        <td> 
+                                <input matInput value="Jan" disabled>
+                              </td>
+                        <td> 
+                                <input matInput value="Feb" disabled>
+                             </td>
+                        <td>    <input matInput value="March" disabled>
+                              </td>
+                        <td><b>NET SALARY(Rs.)</b></td>
+                        <td> 
+                                <input matInput value="Jan" disabled>
+                              </td>
+                        <td> 
+                                <input matInput value="Feb" disabled>
+                             </td>
+                        <td>    <input matInput value="March" disabled>
+                              </td>
+                    </tr> 
+                    
+                    <!-- The last row 
+                    <tr> 
+                        // This td will span two columns, that is 
+                          //  a single column will take up the space of 2 
+                        <td colspan="2">Sum: $18</td> 
+                    </tr> -->
+                    </table>
+                    <br>
+                    <br>
+                    <p>
+                        This certificate is issued on request of <mat-form-field class="example-full-width">
+                                <input matInput formControlName="empid" disabled></mat-form-field> without any financial obligation /liability on the part of institution ; netither this certificate should be treated as any commitment from the institution in whatsover matter.
+                    </p> 
+                  
+                </body> 
+           
+    </section>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div align="right">
+        <label>Principal</label>
+    </div>
+</form>
+</mat-card>
+<!--
+<div align="right">
+    <button mat-raised-button>Download as PDF</button>
+</div>
+-->
+</div>
+</mat-sidenav-content>
+</mat-sidenav-container>
